@@ -1,18 +1,22 @@
 package ru.netology.dataGenerator;
 
 import com.github.javafaker.Faker;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Locale;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class BankData {
 
     private String login;
     private String password;
     private Status status;
 
-    public BankData() {
+    public void createUser() {
         Faker faker = new Faker(new Locale("en"));
         this.setLogin(faker.name().lastName());
         this.setPassword(faker.internet().password(5, 8));

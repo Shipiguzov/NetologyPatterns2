@@ -22,11 +22,11 @@ public class BankTests {
 
     @BeforeAll
     static void setUpAll() {
-        UserAction.addUser(data, requestSpec);
     }
 
     @Test
     void isUserPresent(){
+        data.createUser();
         System.out.println(data);
         UserAction.addUser(data, requestSpec);
         /*given() // "дано"
