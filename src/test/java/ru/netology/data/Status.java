@@ -1,4 +1,4 @@
-package ru.netology.dataGenerator;
+package ru.netology.data;
 
 public enum Status {
     ACTIVE, BLOCKED
